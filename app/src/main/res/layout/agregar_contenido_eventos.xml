@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del evento"
+            android:padding="12dp"
+            android:background="#FFFFFF"/>
+
+        <!-- Tipo -->
+        <EditText
+            android:id="@+id/etTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de evento"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"/>
+
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"/>
+
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha (YYYY-MM-DD)"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:focusable="false"
+            android:clickable="true" />
+
+
+        <EditText
+            android:id="@+id/etPublico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Público objetivo (capellan, personal, familiar, todos)"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"/>
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:minLines="4"
+            android:gravity="top"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"/>
+
+
+        <EditText
+            android:id="@+id/etImagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Imagen (URL o base64)"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"/>
+
+        <!-- Propio -->
+        <CheckBox
+            android:id="@+id/cbPropio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evento propio"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etCupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cupo (opcional)"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/azul_oscuro"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</ScrollView>

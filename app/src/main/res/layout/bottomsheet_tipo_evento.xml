@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Título -->
+    <TextView
+        android:text="Selecciona el tipo de evento"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Encuentro de capellanes -->
+    <LinearLayout
+        android:id="@+id/opcionCapellanes"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:background="@drawable/bg_opcion_evento"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_familia"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:tint="@color/black"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:text="Encuentro de capellanes"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="14dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Congresos -->
+    <LinearLayout
+        android:id="@+id/opcionCongresos"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:background="@drawable/bg_opcion_evento"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_oracion"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:tint="@color/black"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:text="Congresos"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="14dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Talleres -->
+    <LinearLayout
+        android:id="@+id/opcionTalleres"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:background="@drawable/bg_opcion_evento"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_palabra"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:tint="@color/black"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:text="Talleres"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="14dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

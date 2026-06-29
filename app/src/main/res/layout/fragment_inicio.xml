@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- FILA 1 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <include
+                android:id="@+id/itemFamilia"
+                layout="@layout/item_inicio_familia" />
+
+            <include
+                android:id="@+id/itemMisCasos"
+                layout="@layout/item_inicio_mis_casos" />
+        </LinearLayout>
+
+        <!-- FILA 2 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <include
+                android:id="@+id/itemOraciones"
+                layout="@layout/item_inicio_oraciones" />
+
+            <include
+                android:id="@+id/itemPalabra"
+                layout="@layout/item_inicio_palabra" />
+        </LinearLayout>
+
+        <!-- FILA 3 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <include
+                android:id="@+id/itemMensajeFe"
+                layout="@layout/item_inicio_mensaje_fe" />
+
+            <include
+                android:id="@+id/itemConsejeria"
+                layout="@layout/item_inicio_consejeria" />
+        </LinearLayout>
+
+        <!-- FILA 4 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <include
+                android:id="@+id/itemEventos"
+                layout="@layout/item_inicio_eventos" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

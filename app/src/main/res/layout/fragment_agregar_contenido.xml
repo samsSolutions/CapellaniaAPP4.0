@@ -1,0 +1,46 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/etReflexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reflexión"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:minLines="4"
+            android:gravity="top" />
+
+        <EditText
+            android:id="@+id/etVersiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Versículo bíblico"
+            android:padding="12dp"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/azul_oscuro"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</ScrollView>

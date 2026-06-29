@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- IP real de tu PC -->
+        <domain includeSubdomains="true">192.168.0.10</domain>
+
+        <!-- Para emulador -->
+        <domain includeSubdomains="true">10.0.2.2</domain>
+
+        <!-- Necesario para que OkHttp no bloquee -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>

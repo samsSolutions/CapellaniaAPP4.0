@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_filtrar_palabra"
+        android:title="Filtrar palabra"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_agregar_palabra"
+        android:title="Agregar palabra"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <!-- HOME -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.home.HomeFragment"
+        android:label="Capellanía 4.0"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- INICIO -->
+    <fragment
+        android:id="@+id/InicioFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.inicio.InicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio">
+
+        <action
+            android:id="@+id/action_inicio_to_familia"
+            app:destination="@id/familiaFragment"/>
+        <action
+            android:id="@+id/action_inicio_to_oraciones"
+            app:destination="@id/oracionesFragment"/>
+        <action
+            android:id="@+id/action_inicio_to_eventos"
+            app:destination="@id/eventosFragment"/>
+        <action
+            android:id="@+id/action_inicio_to_palabra"
+            app:destination="@id/palabraDiaFragment"/>
+
+    </fragment>
+
+    <!-- AUDITORIA -->
+    <fragment
+        android:id="@+id/nav_auditoria"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.auditoria.AuditoriaFragment"
+        android:label="Auditoria"
+        tools:layout="@layout/fragment_auditoria" />
+
+    <!-- ESTADISTICAS -->
+    <fragment
+        android:id="@+id/nav_estadisticas"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.estadisticas.EstadisticasFragment"
+        android:label="Estadisticas"
+        tools:layout="@layout/fragment_estadisticas" />
+
+    <!-- GESTION -->
+    <fragment
+        android:id="@+id/nav_gestion"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.gestion.GestionFragment"
+        android:label="Gestion"
+        tools:layout="@layout/fragment_gestion" />
+
+    <!-- MULTIMEDIA -->
+    <fragment
+        android:id="@+id/nav_multimedia"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.multimedia.MultimediaFragment"
+        android:label="Multimedia"
+        tools:layout="@layout/fragment_multimedia" />
+
+    <!-- PERFIL -->
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.perfil.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <!-- FAMILIA -->
+
+    <!-- Pantalla principal de Familia -->
+    <fragment
+        android:id="@+id/familiaFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.familia.FamiliaFragment"
+        android:label="Familia"
+        tools:layout="@layout/fragment_familia">
+
+        <action
+            android:id="@+id/action_familia_to_esposo"
+            app:destination="@id/familiaEsposoFragment" />
+
+        <action
+            android:id="@+id/action_familia_to_hijos"
+            app:destination="@id/familiaHijosFragment" />
+
+        <action
+            android:id="@+id/action_familia_to_hogar"
+            app:destination="@id/familiaHogarFragment" />
+    </fragment>
+
+    <!-- Esposo/a -->
+    <fragment
+        android:id="@+id/familiaEsposoFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.familia.FamiliaEsposoFragment"
+        android:label="Esposo/a"
+        tools:layout="@layout/fragment_familia_esposo">
+
+        <action
+            android:id="@+id/action_esposo_to_agregarContenido"
+            app:destination="@id/agregarContenidoFragment" />
+
+        <action
+            android:id="@+id/action_esposo_to_editarContenido"
+            app:destination="@id/editarContenidoFragment" />
+    </fragment>
+
+    <!-- Hijos -->
+    <fragment
+        android:id="@+id/familiaHijosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.familia.FamiliaHijosFragment"
+        android:label="Hijos"
+        tools:layout="@layout/fragment_familia_hijos">
+
+        <action
+            android:id="@+id/action_hijos_to_agregarContenido"
+            app:destination="@id/agregarContenidoFragment" />
+
+        <action
+            android:id="@+id/action_hijos_to_editarContenido"
+            app:destination="@id/editarContenidoFragment" />
+    </fragment>
+
+    <!-- Hogar -->
+    <fragment
+        android:id="@+id/familiaHogarFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.familia.FamiliaHogarFragment"
+        android:label="Hogar"
+        tools:layout="@layout/fragment_familia_hogar">
+
+        <action
+            android:id="@+id/action_hogar_to_agregarContenido"
+            app:destination="@id/agregarContenidoFragment" />
+
+        <action
+            android:id="@+id/action_hogar_to_editarContenido"
+            app:destination="@id/editarContenidoFragment" />
+    </fragment>
+
+    <!-- Agregar contenido -->
+    <fragment
+        android:id="@+id/agregarContenidoFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.familia.AgregarContenidoFamilia"
+        android:label="Agregar contenido"
+        tools:layout="@layout/fragment_agregar_contenido" />
+
+    <!-- Editar contenido -->
+    <fragment
+        android:id="@+id/editarContenidoFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.familia.EditarContenidoFamilia"
+        android:label="Editar contenido"
+        tools:layout="@layout/fragment_editar_contenido" />
+
+
+    <!-- ORACIONES -->
+
+    <!-- principal-->
+    <fragment
+        android:id="@+id/oracionesFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.oraciones.OracionesFragment"
+        android:label="Oraciones"
+        tools:layout="@layout/fragment_oraciones">
+
+        <action
+            android:id="@+id/action_oraciones_to_iniciarServicio"
+            app:destination="@id/iniciarServicioFragment" />
+
+        <action
+            android:id="@+id/action_oraciones_to_proteccionPatrullaje"
+            app:destination="@id/proteccionPatrullajeFragment" />
+
+        <action
+            android:id="@+id/action_oraciones_to_momentosAngustia"
+            app:destination="@id/momentosAngustiaFragment" />
+
+        <action
+            android:id="@+id/action_oraciones_to_companerosCaidos"
+            app:destination="@id/companerosCaidosFragment" />
+    </fragment>
+
+    <!-- inicio servicio -->
+    <fragment
+        android:id="@+id/iniciarServicioFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.oraciones.IniciarServicioFragment"
+        android:label="Iniciar Servicio"
+        tools:layout="@layout/fragment_iniciar_servicio">
+
+        <action
+            android:id="@+id/action_iniciarServicio_to_editarContenidoOraciones"
+            app:destination="@id/editarContenidoOracionesFragment" />
+    </fragment>
+
+    <!-- proteccion patrullaje -->
+    <fragment
+        android:id="@+id/proteccionPatrullajeFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.oraciones.ProteccionPatrullajeFragment"
+        android:label="Protección en Patrullaje"
+        tools:layout="@layout/fragment_proteccion_patrullaje">
+
+        <action
+            android:id="@+id/action_proteccionPatrullaje_to_editarContenidoOraciones"
+            app:destination="@id/editarContenidoOracionesFragment" />
+    </fragment>
+
+    <!-- Momentos de Angustia -->
+    <fragment
+        android:id="@+id/momentosAngustiaFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.oraciones.MomentosAngustiaFragment"
+        android:label="Momentos de Angustia"
+        tools:layout="@layout/fragment_momentos_angustia">
+
+        <action
+            android:id="@+id/action_momentosAngustia_to_editarContenidoOraciones"
+            app:destination="@id/editarContenidoOracionesFragment" />
+    </fragment>
+
+    <!--compañeros caidos -->
+    <fragment
+        android:id="@+id/companerosCaidosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.oraciones.CompanerosCaidosFragment"
+        android:label="Compañeros Caídos"
+        tools:layout="@layout/fragment_companeros_caidos">
+
+        <action
+            android:id="@+id/action_companerosCaidos_to_editarContenidoOraciones"
+            app:destination="@id/editarContenidoOracionesFragment" />
+    </fragment>
+
+    <!-- Editar contenido -->
+    <fragment
+        android:id="@+id/editarContenidoOracionesFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.oraciones.EditarContenidoOraciones"
+        android:label="Editar Oración"
+        tools:layout="@layout/editar_contenido_oraciones" />
+
+
+    <!-- EVENTOS -->
+
+    <!-- principal -->
+    <fragment
+        android:id="@+id/eventosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.eventos.EventosFragment"
+        android:label="Eventos"
+        tools:layout="@layout/fragment_eventos">
+
+        <action
+            android:id="@+id/action_eventos_to_inscripcionesEventos"
+            app:destination="@id/inscripcionesEventosFragment" />
+
+        <action
+            android:id="@+id/action_eventos_to_agregarContenidoEventos"
+            app:destination="@id/agregarContenidoEventosFragment" />
+
+        <action
+            android:id="@+id/action_eventos_to_detalleEvento"
+            app:destination="@id/detalleEventoFragment" />
+    </fragment>
+
+    <!-- MIS INSCRIPCIONES -->
+    <fragment
+        android:id="@+id/inscripcionesEventosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.eventos.InscripcionesEventosFragment"
+        android:label="Mis inscripciones"
+        tools:layout="@layout/fragment_inscripciones_eventos">
+
+        <action
+            android:id="@+id/action_inscripcionesEventos_to_detalleEvento"
+            app:destination="@id/detalleEventoFragment" />
+    </fragment>
+
+    <!-- AGREGAR EVENTO -->
+    <fragment
+        android:id="@+id/agregarContenidoEventosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.eventos.AgregarContenidoEventos"
+        android:label="Agregar evento"
+        tools:layout="@layout/agregar_contenido_eventos" />
+
+    <!-- DETALLE DEL EVENTO (EL QUE FALTABA) -->
+    <fragment
+        android:id="@+id/detalleEventoFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.eventos.DetalleEventoFragment"
+        android:label="Detalle del evento"
+        tools:layout="@layout/fragment_detalle_evento">
+
+        <action
+            android:id="@+id/action_detalleEvento_to_editarContenidoEventos"
+            app:destination="@id/editarContenidoEventosFragment" />
+    </fragment>
+
+    <!-- EDITAR EVENTO -->
+    <fragment
+        android:id="@+id/editarContenidoEventosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.eventos.EditarContenidoEventos"
+        android:label="Editar evento"
+        tools:layout="@layout/editar_contenido_eventos" />
+    <fragment
+        android:id="@+id/misEventosCreadosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.eventos.MisEventosCreadosFragment"
+        android:label="Mis eventos creados">
+        <action
+            android:id="@+id/action_misEventosCreadosFragment_to_inscriptosFragment"
+            app:destination="@id/inscriptosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inscriptosFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.eventos.InscriptosFragment"
+        android:label="Inscriptos">
+        <argument
+            android:name="idEvento"
+            app:argType="integer" />
+    </fragment>
+
+
+    <!-- palabra dia -->
+
+    <!-- principal -->
+    <fragment
+        android:id="@+id/palabraDiaFragment"
+        android:name="com.marilenaescudero.ulp.capellaniaapp.ui.palabraDia.PalabraDiaFragment"
+        android:label="Palabra del Día"
+        tools:layout="@layout/fragment_palabra_dia" />
+
+
+
+</navigation>

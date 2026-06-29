@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- FECHA -->
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtReflexion"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- VERSÍCULO -->
+    <TextView
+        android:id="@+id/txtVersiculo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Versículo del día"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/azul_oscuro"
+        android:fontFamily="@font/nunito"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- REFLEXIÓN -->
+    <TextView
+        android:id="@+id/txtReflexion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reflexión del día"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/nunito"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txtVersiculo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- MINIATURA (Imagen o miniatura de YouTube) -->
+    <ImageView
+        android:id="@+id/imgPalabra"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtReflexion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ÍCONO PLAY SUPERPUESTO -->
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_menu_camera"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/imgPalabra"
+        app:layout_constraintBottom_toBottomOf="@id/imgPalabra"
+        app:layout_constraintStart_toStartOf="@id/imgPalabra"
+        app:layout_constraintEnd_toEndOf="@id/imgPalabra"/>
+
+    <!-- VIDEO MP4 -->
+    <VideoView
+        android:id="@+id/videoPalabra"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtReflexion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- YOUTUBE PLAYER EMBEBIDO -->
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtReflexion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- PODCAST / AUDIO -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerPodcast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:show_buffering="when_playing"
+        app:use_controller="true"
+        app:layout_constraintTop_toBottomOf="@id/txtReflexion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- LOADER -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/playerPodcast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

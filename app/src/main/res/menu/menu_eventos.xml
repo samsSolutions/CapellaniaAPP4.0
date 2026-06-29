@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_inscripciones"
+        android:title="Mis inscripciones"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_mis_creados"
+        android:title="Mis eventos creados"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_crear_evento"
+        android:title="Crear evento"
+        app:showAsAction="never" />
+</menu>
+
